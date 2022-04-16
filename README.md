@@ -28,13 +28,14 @@ The field with the custom date format can be made `sortable` as usual, but the `
 ### Filtering 
 
 This package comes with 5 different filters:
-- `DateFilter` only shows events whose date match the filter value
-- `DateFilterAfter` only shows events whose date is later than the filter value
-- `DateFilterAfterOrOn` only shows events whose date is later than or on the same date as the filter value
-- `DateFilterBefore` only shows events whose date is earlier than the filter value
-- `DateFilterBeforeOrOn` only shows events whose date is earlier than or on the same date as the filter value
+- `DateFilter` only shows items whose date match the filter value
+- `DateFilterAfter` only shows items whose date is later than the filter value
+- `DateFilterAfterOrOn` only shows items whose date is later than or on the same date as the filter value
+- `DateFilterBefore` only shows items whose date is earlier than the filter value
+- `DateFilterBeforeOrOn` only shows items whose date is earlier than or on the same date as the filter value
 
 You can add a combination of these filters to the Nova resource to allow end users to define a date range.
+
 To add the filters to your Nova resource, first add `use` statements for the filters you need to the resource file:
 ```
 use Wdelfuego\Nova4\FormattableDate\Filters\DateFilter;
@@ -54,3 +55,5 @@ Then use in your resource's `filters` method as follows:
         ];
     }
 ```
+
+This example effectively creates a date range filter, you can also filter for specific dates only (using a single `DateFilter`) or force open-ended range filtering by adding just one of the other four filters.
