@@ -2,21 +2,13 @@ This library reintroduces custom DateTime formatting to DateTime fields in Nova 
 
 ## Installation
 Add the dependency to your project's `composer.json`:
-  ```sh
-  composer require wdelfuego/nova4-formattable-date
-  ```
+```sh
+composer require wdelfuego/nova4-formattable-date
+```
   
-Register the service provider by adding it to the `providers` entry in `config/app.php`:
-```
-    'providers' => [
-        ...
-        Wdelfuego\Nova4\FormattableDate\ServiceProvider::class,
-        ...
-    ];
-```
 ## Usage
 ### Formatting
-In your Nova Resource's `fields` method, add a `DateTime` field as usual but add a call to `withDateFormat` to set the format you want to show on Index and Resource views:
+In your Nova resource's `fields` method, add a `DateTime` field as usual but add a call to `withDateFormat` to set the format you want to show on Index and Resource views:
 
 ```
     Fields\DateTime::make(__('Created at'), 'created_at')
@@ -43,7 +35,7 @@ This package comes with 5 different filters:
 - `DateFilterBeforeOrOn` only shows events whose date is earlier than or on the same date as the filter value
 
 You can add a combination of these filters to the Nova resource to allow end users to define a date range.
-To add them filters to your Nova resource, first add `use` statements for the filters you need to the Resource file:
+To add the filters to your Nova resource, first add `use` statements for the filters you need to the resource file:
 ```
 use Wdelfuego\Nova4\FormattableDate\Filters\DateFilter;
 use Wdelfuego\Nova4\FormattableDate\Filters\DateFilterAfter;
@@ -52,7 +44,7 @@ use Wdelfuego\Nova4\FormattableDate\Filters\DateFilterBefore;
 use Wdelfuego\Nova4\FormattableDate\Filters\DateFilterBeforeOrOn;
 ```
 
-Then use in your Resource's `filters` method as follows:
+Then use in your resource's `filters` method as follows:
 ```
     public function filters(NovaRequest $request)
     {

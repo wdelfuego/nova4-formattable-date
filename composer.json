@@ -16,5 +16,14 @@
             "name": "Willem Vervuurt",
             "email": "willem@studiodelfuego.com"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wdelfuego\\Nova4\\FormattableDate\\ServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
 }
