@@ -1,3 +1,11 @@
+
+# Package deprecated
+Version 1.0.2 is the final version of this package. If you are using Nova 4.2.4 or newer and want to keep using the `withDateFormat` helper or the custom filters introduced by this package, you should use the generic [wdelfuego/nova-datetime](https://github.com/wdelfuego/nova-datetime) package instead.
+
+As of Nova 4.2.4, custom DateTime formatting is available [natively](https://github.com/laravel/nova-issues/discussions/3929#discussioncomment-2607539) in Nova. 
+
+---
+
 This package reintroduces custom DateTime formatting to DateTime fields in Nova 4 resources and comes with a couple of custom filters to circumvent the issues described in [this discussion](https://github.com/laravel/nova-issues/discussions/3929).
 
 ## Installation
